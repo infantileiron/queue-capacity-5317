@@ -1,0 +1,2 @@
+<script setup lang="ts">import type {Profile} from '../types/domain';import {number} from '../utils/format';defineProps<{profile:Profile}>();
+</script><template><div class="rate-summary"><div><span>到达率 λ</span><b>{{number(profile.arrival_rate,3)}}<small>次 / 分钟</small></b></div><div><span>单窗口服务率 μ</span><b>{{number(profile.service_rate,3)}}<small>次 / 分钟</small></b></div><div><span>平均服务时长</span><b>{{number(profile.statistics.mean_service,1)}}<small>分钟 / 次</small></b></div></div></template>

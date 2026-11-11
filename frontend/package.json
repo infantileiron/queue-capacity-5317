@@ -1,0 +1,19 @@
+{
+  "name": "queue-capacity",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vue-tsc --noEmit && vite build"
+  },
+  "dependencies": {
+    "vue": "3.5.16"
+  },
+  "devDependencies": {
+    "typescript": "5.7.3",
+    "vue-tsc": "2.2.12",
+    "vite": "6.4.6",
+    "@vitejs/plugin-vue": "5.2.4"
+  }
+}

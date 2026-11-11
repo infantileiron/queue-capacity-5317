@@ -1,0 +1,1 @@
+export const navigation=[{id:'overview',label:'容量总览',code:'01'},{id:'datasets',label:'收样观测',code:'02'},{id:'profiles',label:'服务剖面',code:'03'},{id:'scenarios',label:'窗口方案',code:'04'},{id:'results',label:'等待与负荷',code:'05'},{id:'reviews',label:'复核归档',code:'06'}];
