@@ -1,5 +1,5 @@
 from .user import User
-from .dataset import ArrivalDataset
+from .dataset import ArrivalDataset,DatasetRevision
 from .profile import ServiceProfile
 from .scenario import CapacityScenario
 from .run import SimulationRun

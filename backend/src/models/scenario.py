@@ -13,4 +13,6 @@ class CapacityScenario(Base):
  warmup_minutes:Mapped[int]=mapped_column(Integer)
  replications:Mapped[int]=mapped_column(Integer)
  seed:Mapped[int]=mapped_column(Integer)
+ stale:Mapped[int]=mapped_column(Integer,default=0)
+ stale_reason:Mapped[str]=mapped_column(String(200),default="")
  created_at:Mapped[str]=mapped_column(String(64))

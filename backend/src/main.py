@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 import logging,redis
 from fastapi import FastAPI
 from sqlalchemy import text
-from src.config.database import engine
+from src.config.database import engine,ensure_schema
 from src.config.settings import SEED_DEMO,REDIS_URL
 from src.middlewares.audit import AuditMiddleware
 from src.middlewares.errors import ErrorMiddleware
@@ -14,6 +14,8 @@ async def lifespan(app):
    from scripts.seed_demo import seed
    seed()
   except Exception:logging.exception("seed failed")
+ try:ensure_schema()
+ except Exception:logging.exception("schema check failed")
  yield
 app=FastAPI(title="云岫 · 收样窗口容量预演",lifespan=lifespan)
 app.add_middleware(AuditMiddleware);app.add_middleware(ErrorMiddleware)

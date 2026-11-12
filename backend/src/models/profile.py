@@ -10,4 +10,7 @@ class ServiceProfile(Base):
  arrival_rate:Mapped[float]=mapped_column(Float)
  service_rate:Mapped[float]=mapped_column(Float)
  statistics:Mapped[dict]=mapped_column(JSON)
+ stale:Mapped[int]=mapped_column(Integer,default=0)
+ last_error:Mapped[str]=mapped_column(Text,default="")
+ dataset_revision:Mapped[int]=mapped_column(Integer,default=1)
  created_at:Mapped[str]=mapped_column(String(64))
